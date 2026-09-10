@@ -1,5 +1,5 @@
 body {
-    background-color: #EAF3F8;
+    background-color: #070b19;
     color: #1E3A5F;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -13,21 +13,25 @@ body {
     border: 1px solid #1E3A5F;
     border-radius: 20px;
     padding: 30px;
-    background-color: white;
+    background-color: #111827;
     width: 350px;
-    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 25px rgba(30, 58, 95, 0.5), 0 15px 35px rgba(0, 0, 0, 0.8);
     text-align: left;
 }
 
 .input {
-    border: 1px solid #1E3A5F;
     border-radius: 10px;
     padding: 8px;
-    margin-top: 3px;
     margin-bottom: 19px;
-    background-color: #fff;
-    color: #1a2332;
+    margin-top: 3px;
+    background-color: #222;
+    color: #fff;
     width: 330px;
+    outline: invert;
+    border: 3px solid transparent;
+    background-image: linear-gradient(#222, #222), linear-gradient(to right, blue, red, yellow);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 .input::placeholder {
@@ -36,24 +40,37 @@ body {
 
 .input:focus {
     outline: none;
-    border-color: #1e3a8a;
-    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+    border: 3px solid transparent;
+    background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(to right, #0055ff, #ff2222, #ffcc00);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 15px rgba(255, 34, 34, 0.6), 0 0 5px rgba(0, 85, 255, 0.4); 
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 .btn-enviar {
     width: 100%;
     margin-top: 30px;
     border: none;
-    border-radius: 3px;
-    padding: 15px;
-    background-color: #1e3a8a;
+    border-radius: 8px;
+    padding: 16px;
+    background: linear-gradient(135deg, #1e3a8a, #0f1c45);
     color: white;
     cursor: pointer;
     font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
 .btn-enviar:hover {
-    background-color: rgb(11, 167, 11);
+    color: #fff;
+    background: linear-gradient(135deg, #2a4db3, #1e3a8a);
+    box-shadow: 0 8px 25px rgba(42, 77, 179, 0.6);
+    transform: translateY(-3px) scale(1.02);
 }
 
 .titulo_principal {
@@ -63,4 +80,24 @@ body {
     margin: auto;
     border-radius: 5px;
     width: 400px;
+}
+
+.label{
+    color: #94a3b8;
+}
+
+.titulo_secundario{
+    color: #cbd5e1;
+    text-decoration: underline;
+}
+
+a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
 }

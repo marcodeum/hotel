@@ -8,8 +8,8 @@ $banco = "hotel_db";
 $conexao = mysqli_connect($host, $usuario, $senha, $banco);
 
 if($conexao){
-    echo "Conectou ao banco de dados<br>";
+    echo "<p>Conectado ao banco de dados</p><br><br>";
 }else{
-    echo "Não conectou ao banco de dados<br>";
+    echo "Não conectado ao banco de dados<br><br><br>";
 }
 ?>
