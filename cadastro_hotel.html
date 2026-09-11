@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Hotel</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h1 style="border-image: linear-gradient(to right, blue, red, yellow) 1;" class="titulo_principal">Hos<span style="color: red;">pede</span><span style="color: yellow;">Já</span></h1>
+    <h1 style="border-image: linear-gradient(to right, blue, red, yellow) 1;" class="titulo_principal">Hos<span
+            style="color: red;">pede</span><span style="color: yellow;">Já</span></h1>
     <br>
     <h2 class="titulo_secundario">Cadastro de Hotel</h2>
     <form class="form" action="salvar_hotel.php" method="post">
         <label class="label" for="nome">Nome do Hotel</label><br>
-        <input class="input"type="text" id="nome" name="nome" placeholder="Nome do Hotel" required><br>
+        <input class="input" type="text" id="nome" name="nome" placeholder="Nome do Hotel" required><br>
         <label class="label" for="cidade">Cidade</label><br>
-        <input class="input"type="text" id="cidade" name="cidade" placeholder="Cidade do Hotel" required><br>
+        <input class="input" type="text" id="cidade" name="cidade" placeholder="Cidade do Hotel" required><br>
         <label class="label" for="classificacao">Classificação em Estrelas</label><br>
         <label for="estrela">
             <input type="radio" name="estrela" id="estrela" value="1" required> ⭐
@@ -35,6 +38,7 @@
         <button class="btn-enviar">ENVIAR</button>
     </form>
     <br><br>
-    <a href="cadastro_cliente.html">VOLTAR AO PAINEL PRINCIPAL</a>
+    <a href="index.html">VOLTAR AO PAINEL PRINCIPAL</a>
 </body>
+
 </html>

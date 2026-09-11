@@ -15,7 +15,7 @@ body {
     padding: 30px;
     background-color: #111827;
     width: 350px;
-    box-shadow: 0 0 25px rgba(30, 58, 95, 0.5), 0 15px 35px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 25px rgba(30, 58, 95, 0.7);
     text-align: left;
 }
 
@@ -42,9 +42,8 @@ body {
     outline: none;
     border: 3px solid transparent;
     background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(to right, #0055ff, #ff2222, #ffcc00);
-    background-origin: border-box;
     background-clip: padding-box, border-box;
-    box-shadow: 0 0 15px rgba(255, 34, 34, 0.6), 0 0 5px rgba(0, 85, 255, 0.4); 
+    box-shadow: 0 0 15px rgba(255, 34, 34, 0.6), 0 0 5px rgba(0, 85, 255, 0.4);
     transform: scale(1.02);
     transition: all 0.3s ease;
 }
@@ -63,14 +62,13 @@ body {
     letter-spacing: 1.5px;
     box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
     transition: all 0.3s ease;
-    text-transform: uppercase;
 }
 
 .btn-enviar:hover {
     color: #fff;
     background: linear-gradient(135deg, #2a4db3, #1e3a8a);
     box-shadow: 0 8px 25px rgba(42, 77, 179, 0.6);
-    transform: translateY(-3px) scale(1.02);
+    transform: scale(1.02);
 }
 
 .titulo_principal {
@@ -82,11 +80,11 @@ body {
     width: 400px;
 }
 
-.label{
+.label {
     color: #94a3b8;
 }
 
-.titulo_secundario{
+.titulo_secundario {
     color: #cbd5e1;
     text-decoration: underline;
 }
