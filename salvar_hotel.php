@@ -15,9 +15,11 @@ require 'conexao.php';
 $nome = $_POST['nome'];
 $cidade = $_POST['cidade'];
 $estrela = $_POST['estrela'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
 
-$sql = "INSERT INTO hoteis (nome, cidade, estrelas)
-VALUES('$nome', '$cidade', $estrela);";
+$sql = "INSERT INTO hoteis (nome, cidade, estrelas, email, senha)
+VALUES('$nome', '$cidade', $estrela, '$email', '$senha');";
 
 if(mysqli_query($conexao,$sql)){
     echo "
@@ -31,7 +33,8 @@ if(mysqli_query($conexao,$sql)){
         <p style='color: #cbd5e1; font-size: 18px;'>
             <span class='label'>✔️ Nome:</span> $nome<br><br>
             <span class='label'>✔️ Cidade:</span> $cidade<br><br>
-            <span class='label'>✔️ Estrelas:</span> $estrela
+            <span class='label'>✔️ Estrelas:</span> $estrela<br><br>
+            <span class='label'>✔️ Email:</span> $email<br><br>
         </p>
     </div>";
 }else{
