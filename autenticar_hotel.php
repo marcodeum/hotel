@@ -5,7 +5,7 @@ require_once 'conexao.php';
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM clientes WHERE senha = '$senha' AND email = '$email'";
+$sql = "SELECT * FROM hoteis WHERE senha = '$senha' AND email = '$email'";
 
 $resultado = mysqli_query(
     $conexao,
@@ -16,7 +16,7 @@ if(mysqli_num_rows($resultado) > 0){
     header("Location: minhas_reservas.php");
     exit();
 }else{
-    header("Location: login.html");
+    header("Location: login_hotel.html");
     exit();
 }
 
