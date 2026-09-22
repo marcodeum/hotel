@@ -13,7 +13,7 @@ $resultado = mysqli_query(
 );
 
 if(mysqli_num_rows($resultado) > 0){
-    header("Location: minhas_reservas.php");
+    header("Location: cadastrar_quarto.php");
     exit();
 }else{
     header("Location: login_hotel.html");

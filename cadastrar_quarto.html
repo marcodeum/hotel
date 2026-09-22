@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Quarto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="titulo_principal" style="color: blue;
+    border-image: linear-gradient(to right, blue, red, yellow) 1">Hotel<spans style="color: red;">Sys</span><span style="color: yellow;">tem</span></h1>
+    <br>
+    <h2 class="titulo_secundario" style="text-decoration: underline;">Cadastrar Quarto</h2>
+    <form class="form" action="salvar_quarto.php" method="post">
+        <label class="label" for="idHotel">ID do Hotel</label><br>
+        <input class="input" type="number" name="idHotel" id="idHotel" placeholder="Ex: 86452" required><br>
+        <label class="label" for="numQuarto">Número do Quarto</label><br>
+        <input class="input" type="number" name="numQuarto" id="numQuarto" placeholder="Ex: 101, 203" required><br>
+        <label class="label" for="tipoQuarto">Tipo de Quarto</label><br>
+        <input class="input" type="text" id="tipoQuarto" name="tipoQuarto" placeholder="Ex: Solteiro, Casal, Suíte de Luxo" required><br>
+        <label class="label" for="preco">Preço da Diária (R$)</label><br>
+        <input class="input" type="number" step="0.01" name="preco" id="preco" placeholder="Ex: R$249.99"><br><br>
+        <button class="btn-enviar">CADASTRAR</button>
+    </form>
+    <br><br>
+    <a href="logout_hotel.php">Sair / Deslogar do Sistema</a>
+</body>
+</html>
