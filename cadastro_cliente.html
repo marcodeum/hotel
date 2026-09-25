@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Hotel Mon Amour</title>
+    <title>Cadastro - Cliente</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,14 +16,14 @@
     <h2 class="titulo_secundario" style="text-decoration: underline;">Cadastro de Cliente</h2>
     <form class="form" action="salvar_cliente.php" method="post">
         <label class="label" for="nome">Nome Completo</label><br>
-        <input class="input" type="text" id="nome" name="nome" placeholder="Seu Nome" required><br>
+        <input class="input" type="text" id="nome" name="nome" placeholder="Ex: Marco Túlio" required><br>
         <label class="label" for="email">Email</label><br>
-        <input class="input" type="email" id="email" name="email" placeholder="seuemail@email.com.br" required><br>
+        <input class="input" type="email" id="email" name="email" placeholder="Ex: seuemail@email.com.br" required><br>
         <label class="label" for="tel">Telefone</label><br>
-        <input class="input" type="text" id="tel" name="tel" placeholder="(xx) xxxxx-xxxx" required><br>
+        <input class="input" type="text" id="tel" name="tel" placeholder="Ex: (xx) xxxxx-xxxx" required><br>
         <label class="label" for="senha">Senha</label><br>
-        <input class="input" type="password" id="senha" name="senha" placeholder="Sua Senha" required><br><br>
-        <button class="btn-enviar">CADASTRAR</button>
+        <input class="input" type="password" id="senha" name="senha" placeholder="Ex: senha123" required><br><br>
+        <button class="btn-enviar" type="submit">CADASTRAR</button>
     </form>
     <br><br>
     <a href="login.html">LOGIN</a>

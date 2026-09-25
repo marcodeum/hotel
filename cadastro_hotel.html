@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Hotel</title>
+    <title>Cadastro - Hotel</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,13 +15,13 @@
     <h2 class="titulo_secundario">Cadastro de Hotel</h2>
     <form class="form" action="salvar_hotel.php" method="post">
         <label class="label" for="nome">Nome do Hotel</label><br>
-        <input class="input" type="text" id="nome" name="nome" placeholder="Nome do Hotel" required><br>
+        <input class="input" type="text" id="nome" name="nome" placeholder="Ex: Hotel Ita" required><br>
         <label class="label" for="cidade">Cidade</label><br>
-        <input class="input" type="text" id="cidade" name="cidade" placeholder="Cidade do Hotel" required><br>
-        <label  class="label" for="email">Email</label><br>
-        <input class="input type="email" id="email" name="email" placeholder="seuemail@email.com">
-        <label  class="label" for="senha">Senha</label><br>
-        <input class="input" type="password" id="senha" name="senha" placeholder="Senha">
+        <input class="input" type="text" id="cidade" name="cidade" placeholder="Ex: Itabira" required><br>
+        <label class="label" for="email">Email</label><br>
+        <input class="input type=" email" id="email" name="email" placeholder="Ex: seuemail@email.com">
+        <label class="label" for="senha">Senha</label><br>
+        <input class="input" type="password" id="senha" name="senha" placeholder="Ex: Senha123">
         <label class="label" for="classificacao">Classificação em Estrelas</label><br>
         <label for="estrela">
             <input type="radio" name="estrela" id="estrela" value="1" required> ⭐
@@ -39,7 +39,7 @@
             <input type="radio" name="estrela" id="estrela" value="5" required> ⭐⭐⭐⭐⭐
         </label>
         <br><br>
-        <button class="btn-enviar">CADASTRAR</button>
+        <button class="btn-enviar" type="submit">CADASTRAR</button>
     </form>
     <br><br>
     <a href="login_hotel.html">LOGIN</a>

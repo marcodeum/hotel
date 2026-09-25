@@ -47,7 +47,7 @@ $result = mysqli_query(
                     echo "<td>" . $linha['cidade'] . "</td>";
                     echo "<td>" . $linha['nome'] . "</td>";
                     echo "<td>" . $linha['estrelas'] . "</td>";
-                    echo "<td><a href='listar_quartos.php?hotel_id=".$linha['id'].">VER QUARTOS DISPONÍVEIS</a></td>" ;
+                    echo "<td><a href='ver_quartos.php?hotel_id=".$linha['id']."'>VER QUARTOS DISPONÍVEIS</a></td>" ;
                     echo "</tr>";
                     }
                 ?>
