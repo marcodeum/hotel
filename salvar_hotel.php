@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Hotel</title>
+    <title>Cadastro do Hotel</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<h1 class="titulo_principal" style="color: blue; border-image: linear-gradient(to right, blue, red, yellow) 1">
+        Hotel<span style="color: red;">Sys</span><span style="color: yellow;">tem</span>
+    </h1>
+    <br>
+    
+    <h2 class="titulo_secundario">Cadastro do Hotel</h2>
 <?php
 
 require_once 'conexao.php';
