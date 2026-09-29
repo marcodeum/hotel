@@ -26,9 +26,9 @@ $result = mysqli_query(
         Hotel<span style="color: red;">Sys</span><span style="color: yellow;">tem</span>
     </h1>
     <br>
-    
+
     <h2 class="titulo_secundario">Lista dos Hoteis</h2>
-    
+
     <table class="table" border="1" style="text-align: left;">
         <thead>
             <tr>
@@ -40,18 +40,19 @@ $result = mysqli_query(
             </tr>
         </thead>
         <tbody>
-            <?php while($linha = mysqli_fetch_assoc($result)){
+            <?php while ($linha = mysqli_fetch_assoc($result)) {
 
-            echo "<tr>";
-                    echo "<td>" . $linha['id'] . "</td>"; 
-                    echo "<td>" . $linha['cidade'] . "</td>";
-                    echo "<td>" . $linha['nome'] . "</td>";
-                    echo "<td>" . $linha['estrelas'] . "</td>";
-                    echo "<td><a href='ver_quartos.php?hotel_id=".$linha['id']."'>VER QUARTOS DISPONÍVEIS</a></td>" ;
-                    echo "</tr>";
-                    }
-                ?>
+                echo "<tr>";
+                echo "<td>" . $linha['id'] . "</td>";
+                echo "<td>" . $linha['cidade'] . "</td>";
+                echo "<td>" . $linha['nome'] . "</td>";
+                echo "<td>" . $linha['estrelas'] . "</td>";
+                echo "<td><a href='ver_quartos.php?hotel_id=" . $linha['id'] . "'>VER QUARTOS DISPONÍVEIS</a></td>";
+                echo "</tr>";
+            }
+            ?>
         </tbody>
     </table>
 </body>
+
 </html>

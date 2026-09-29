@@ -26,9 +26,9 @@ $result = mysqli_query(
         Hotel<span style="color: red;">Sys</span><span style="color: yellow;">tem</span>
     </h1>
     <br>
-    
+
     <h2 class="titulo_secundario">Lista dos Quartos</h2>
-    
+
     <table class="table" border="1" style="text-align: left;">
         <thead>
             <tr>
@@ -41,20 +41,21 @@ $result = mysqli_query(
             </tr>
         </thead>
         <tbody>
-            <?php while($linha = mysqli_fetch_assoc($result)){
+            <?php while ($linha = mysqli_fetch_assoc($result)) {
 
-            echo "<tr>";
-                    echo "<td>" . $linha['id'] . "</td>"; 
-                    echo "<td>" . $linha['hotel_id'] . "</td>";
-                    echo "<td>" . $linha['numero'] . "</td>";
-                    echo "<td>" . $linha['tipo'] . "</td>";
-                    echo "<td>R$" . $linha['preco_diaria'] . "</td>";
-                    echo "<td>" . $linha['disponivel'] . "</td>";
+                echo "<tr>";
+                echo "<td>" . $linha['id'] . "</td>";
+                echo "<td>" . $linha['hotel_id'] . "</td>";
+                echo "<td>" . $linha['numero'] . "</td>";
+                echo "<td>" . $linha['tipo'] . "</td>";
+                echo "<td>R$" . $linha['preco_diaria'] . "</td>";
+                echo "<td>" . $linha['disponivel'] . "</td>";
             }
-                ?>
+            ?>
         </tbody>
     </table>
     <br><br>
-        <a href="cadastrar_quarto.html">CADASTRAR NOVO QUARTO</a> / <a href="logout_hotel.php">SAIR</a>
+    <a href="cadastrar_quarto.html">CADASTRAR NOVO QUARTO</a> / <a href="logout_hotel.php">SAIR</a>
 </body>
+
 </html>

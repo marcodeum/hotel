@@ -4,7 +4,11 @@ require_once 'conexao.php';
 
 $id_cliente = $_GET['id_cliente'];
 
-$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome FROM reservas JOIN quartos ON reservas.quarto_id = quartos.id JOIN hoteis ON quartos.hotel_id = hoteis.id WHERE reservas.cliente_id = $id_cliente";
+$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome 
+FROM reservas 
+JOIN quartos ON reservas.quarto_id = quartos.id 
+JOIN hoteis ON quartos.hotel_id = hoteis.id 
+WHERE reservas.cliente_id = $id_cliente";
 
 
 $result = mysqli_query($conexao, $sql);
@@ -26,9 +30,9 @@ $result = mysqli_query($conexao, $sql);
         Hotel<span style="color: red;">Sys</span><span style="color: yellow;">tem</span>
     </h1>
     <br>
-    
+
     <h2 class="titulo_secundario">Minhas Reservas</h2>
-    
+
     <table class="table" border="1" style="text-align: left;">
         <thead>
             <tr>
@@ -42,22 +46,23 @@ $result = mysqli_query($conexao, $sql);
             </tr>
         </thead>
         <tbody>
-            <?php while($linha = mysqli_fetch_assoc($result)){
+            <?php while ($linha = mysqli_fetch_assoc($result)) {
 
-            echo "<tr>";
-                    echo "<td>" . $linha['id'] . "</td>"; 
-                    echo "<td>" . $linha['nome'] . "</td>";
-                    echo "<td>" . $linha['numero'] . "</td>";
-                    echo "<td>" . $linha['tipo'] . "</td>";
-                    echo "<td>" . $linha['preco_diaria'] . "</td>";
-                    echo "<td>" . $linha['data_entrada'] . "</td>";
-                    echo "<td>" . $linha['data_saida'] . "</td>";
-                    echo "</tr>";
-                    }
-                ?>
+                echo "<tr>";
+                echo "<td>" . $linha['id'] . "</td>";
+                echo "<td>" . $linha['nome'] . "</td>";
+                echo "<td>" . $linha['numero'] . "</td>";
+                echo "<td>" . $linha['tipo'] . "</td>";
+                echo "<td>" . $linha['preco_diaria'] . "</td>";
+                echo "<td>" . $linha['data_entrada'] . "</td>";
+                echo "<td>" . $linha['data_saida'] . "</td>";
+                echo "</tr>";
+            }
+            ?>
         </tbody>
     </table>
     <br><br>
     <a href="listar_hoteis.php">LISTA DOS HOTÉIS</a>
 </body>
+
 </html>

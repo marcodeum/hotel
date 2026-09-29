@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salvar Reserva</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1 class="titulo_principal" style="color: blue; border-image: linear-gradient(to right, blue, red, yellow) 1">
         Hotel<span style="color: red;">Sys</span><span style="color: yellow;">tem</span>
     </h1>
     <br>
-    
+
     <h2 class="titulo_secundario">Salvar Reserva</h2>
 </body>
+
 </html>
 
 <?php
@@ -30,10 +33,10 @@ VALUES ($id_cliente, $id_quarto, '$data_entrada', '$data_saida')";
 
 $result = mysqli_query($conexao, $sql);
 
-if(!$result){
+if (!$result) {
     header("Location: ver_quartos.php");
     exit();
-}elseif($result){
+} elseif ($result) {
     echo "
     <div class='form'>
         <h2 class='titulo_secundario' style='text-align: center; margin-bottom: 25px;'>

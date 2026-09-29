@@ -14,10 +14,10 @@ $resultado = mysqli_query(
 
 $row = mysqli_fetch_assoc($resultado);
 
-if(mysqli_num_rows($resultado) > 0){
-    header("Location: minhas_reservas.php?id_cliente=".$row['id']);
+if (mysqli_num_rows($resultado) > 0) {
+    header("Location: minhas_reservas.php?id_cliente=" . $row['id']);
     exit();
-}else{
+} else {
     header("Location: login.html");
     exit();
 }

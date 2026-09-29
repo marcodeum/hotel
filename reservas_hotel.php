@@ -4,7 +4,11 @@ require_once 'conexao.php';
 
 $hotel_id = $_GET['hotel_id'];
 
-$sql = "SELECT reservas.id AS reservas_id, clientes.nome, quartos.id AS quartos_id, clientes.telefone, reservas.data_entrada, reservas.data_saida, quartos.tipo, quartos.preco_diaria, quartos.numero FROM reservas JOIN clientes ON reservas.cliente_id = clientes.id JOIN quartos ON reservas.quarto_id = quartos.id WHERE quartos.hotel_id = $hotel_id";
+$sql = "SELECT reservas.id AS reservas_id, clientes.nome, quartos.id AS quartos_id, clientes.telefone, reservas.data_entrada, reservas.data_saida, quartos.tipo, quartos.preco_diaria, quartos.numero 
+FROM reservas 
+JOIN clientes ON reservas.cliente_id = clientes.id 
+JOIN quartos ON reservas.quarto_id = quartos.id 
+WHERE quartos.hotel_id = $hotel_id";
 
 $result = mysqli_query($conexao, $sql);
 
@@ -25,9 +29,9 @@ $result = mysqli_query($conexao, $sql);
         Hotel<span style="color: red;">Sys</span><span style="color: yellow;">tem</span>
     </h1>
     <br>
-    
+
     <h2 class="titulo_secundario">Reservas do Hotel</h2>
-    
+
     <table class="table" border="1" style="text-align: left;">
         <thead>
             <tr>
@@ -42,23 +46,24 @@ $result = mysqli_query($conexao, $sql);
             </tr>
         </thead>
         <tbody>
-            <?php while($linha = mysqli_fetch_assoc($result)){
+            <?php while ($linha = mysqli_fetch_assoc($result)) {
 
-            echo "<tr>";
-                    echo "<td>" . $linha['reservas_id'] . "</td>"; 
-                    echo "<td>" . $linha['nome'] . "</td>";
-                    echo "<td>" . $linha['telefone'] . "</td>";
-                    echo "<td>" . $linha['numero'] . "</td>";
-                    echo "<td>" . $linha['tipo'] . "</td>";
-                    echo "<td>" . $linha['preco_diaria'] . "</td>";
-                    echo "<td>" . $linha['data_entrada'] . "</td>";
-                    echo "<td>" . $linha['data_saida'] . "</td>";
-                    echo "</tr>";
-                    }
-                ?>
+                echo "<tr>";
+                echo "<td>" . $linha['reservas_id'] . "</td>";
+                echo "<td>" . $linha['nome'] . "</td>";
+                echo "<td>" . $linha['telefone'] . "</td>";
+                echo "<td>" . $linha['numero'] . "</td>";
+                echo "<td>" . $linha['tipo'] . "</td>";
+                echo "<td>" . $linha['preco_diaria'] . "</td>";
+                echo "<td>" . $linha['data_entrada'] . "</td>";
+                echo "<td>" . $linha['data_saida'] . "</td>";
+                echo "</tr>";
+            }
+            ?>
         </tbody>
     </table>
     <br><br>
     <a href="cadastrar_quarto.html">CADASTRAR NOVO QUARTO</a> / <a href="logout_hotel.php">SAIR</a>
 </body>
+
 </html>

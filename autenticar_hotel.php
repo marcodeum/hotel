@@ -12,10 +12,10 @@ $resultado = mysqli_query(
     $sql
 );
 
-if(mysqli_num_rows($resultado) > 0){
-    header("Location: cadastrar_quarto.php");
+if (mysqli_num_rows($resultado) > 0) {
+    header("Location: cadastrar_quarto.html");
     exit();
-}else{
+} else {
     header("Location: login_hotel.html");
     exit();
 }
