@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['logado']) || $_SESSION['logado'] != true){
+    header("location: login.html");
+    exit();
+}
+
 require_once 'conexao.php';
 
 $id_cliente = $_GET['id_cliente'];

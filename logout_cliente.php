@@ -4,7 +4,7 @@ session_start();
 session_unset();
 session_destroy();
 
-header("location: login_hotel.html");
+header("location: login.html");
 exit();
 
 ?>

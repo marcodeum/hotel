@@ -19,5 +19,3 @@ if (mysqli_num_rows($resultado) > 0) {
     header("Location: login_hotel.html");
     exit();
 }
-
-?>
